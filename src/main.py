@@ -15,6 +15,7 @@ app = FastAPI()
 def on_startup():
     init_db()
 
+
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
     print(request.query_params)
@@ -30,8 +31,8 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
         content=jsonable_encoder(body),
     )
 
-app.include_router(movie_controller.router)
 
+app.include_router(movie_controller.router)
 
 if __name__ == "__main__":
     uvicorn.run("main:app")

@@ -1,5 +1,5 @@
-from sqlmodel import SQLModel, Field, Column, Index
 from sqlalchemy.types import UserDefinedType
+from sqlmodel import SQLModel, Field, Column, Index
 
 
 class Vector(UserDefinedType):
