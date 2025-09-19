@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 
 from sqlmodel import Session, text
 
-from src.entity.movie import Movie
-from src.helper.transformer import create_embedding
+from python_pg_bigm.entity.movie import Movie
+from python_pg_bigm.helper.transformer import create_embedding
 
 
 class MovieRepositoryInterface(ABC):

@@ -4,9 +4,9 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
-from src.config.database import init_db
-from src.controller import movie_controller
-from src.model.api_response import ApiErrorResponse
+from python_pg_bigm.config.database import init_db
+from python_pg_bigm.controller import movie_controller
+from python_pg_bigm.model.api_response import ApiErrorResponse
 
 app = FastAPI()
 

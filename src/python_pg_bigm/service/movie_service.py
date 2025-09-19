@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
 
-from src.helper.transformer import create_embedding
-from src.model.api_response import ApiResponse, ApiSuccessResponse
-from src.repository.movie_repository import MovieRepository
+from python_pg_bigm.helper.transformer import create_embedding
+from python_pg_bigm.model.api_response import ApiResponse, ApiSuccessResponse
+from python_pg_bigm.repository.movie_repository import MovieRepository
 
 
 class MovieServiceInterface(ABC):

@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends
 from sqlmodel import Session
 
-from src.config.database import get_session
-from src.model.create_movie_request import CreateMovieRequest
-from src.repository.movie_repository import MovieRepository
-from src.service.movie_service import MovieService
+from python_pg_bigm.config.database import get_session
+from python_pg_bigm.model.create_movie_request import CreateMovieRequest
+from python_pg_bigm.repository.movie_repository import MovieRepository
+from python_pg_bigm.service.movie_service import MovieService
 
 router = APIRouter(prefix="/movie", tags=["Movie"])
 
