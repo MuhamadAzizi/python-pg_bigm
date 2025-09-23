@@ -5,7 +5,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
 
 from python_pg_bigm.config.database import init_db
-from python_pg_bigm.controller import movie_controller
+from python_pg_bigm.controller import movie_controller, llm_controller
 from python_pg_bigm.model.api_response import ApiErrorResponse
 
 app = FastAPI()
@@ -33,6 +33,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 
 app.include_router(movie_controller.router)
+app.include_router(llm_controller.router)
 
 if __name__ == "__main__":
     uvicorn.run("main:app")
