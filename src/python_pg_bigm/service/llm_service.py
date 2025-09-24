@@ -19,7 +19,7 @@ from python_pg_bigm.model.query_llm_request import QueryLlmRequest
 
 DATA_PATH = "../../../data"
 DB_PATH = "../../../chroma_db"
-LLM_MODEL = "llama3"
+LLM_MODEL = "tinyllama"
 EMBEDDING_MODEL = "nomic-embed-text"
 
 
@@ -85,8 +85,7 @@ class LlmService(LlmServiceInterface):
         return ApiSuccessResponse(
             status=True,
             message=f"'{file.filename}' processed and added to the knowledge base",
-            data=[],
-            meta=file
+            data=[]
         )
 
     def query(self, request: QueryLlmRequest) -> ApiResponse:

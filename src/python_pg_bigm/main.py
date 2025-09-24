@@ -36,4 +36,4 @@ app.include_router(movie_controller.router)
 app.include_router(llm_controller.router)
 
 if __name__ == "__main__":
-    uvicorn.run("main:app")
+    uvicorn.run("main:app", reload=True)
